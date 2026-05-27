@@ -1,6 +1,8 @@
 import { HatchDivider } from "@/components/hatch-divider"
+import { LinksList } from "@/components/links-list"
 import { ProjectsList } from "@/components/projects-list"
 import { TimelineList } from "@/components/timeline-list"
+import { links } from "@/data/links"
 import { projects } from "@/data/projects"
 import { timeline } from "@/data/timeline"
 
@@ -68,6 +70,12 @@ export default function Page() {
 
       <section id="timeline" className={sectionClassName}>
         <TimelineList items={sortedTimeline} />
+      </section>
+
+      <HatchDivider />
+
+      <section id="links" className={sectionClassName}>
+        <LinksList items={links} />
       </section>
     </>
   )

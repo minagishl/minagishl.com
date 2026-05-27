@@ -10,31 +10,13 @@ const sortedTimeline = [...timeline].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 )
 
-const host = process.env.HOST || "minagishl.com"
 const title = process.env.TITLE || "Minagishl"
-const description =
-  process.env.DESCRIPTION ||
-  "Student developer in Japan building open-source web tools—bots, extensions, and things that make everyday workflows a little easier."
 
 const sectionClassName = "scroll-mt-4 px-6 py-6 sm:px-8"
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: title,
-  url: `https://${host}`,
-  description,
-  jobTitle: "Student Developer",
-  sameAs: ["https://x.com/minagishl", "https://github.com/minagishl"],
-}
 
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <section id="about" className={sectionClassName}>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1.5">

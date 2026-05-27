@@ -12,6 +12,16 @@ const description =
   process.env.DESCRIPTION ||
   "Student developer in Japan building open-source web tools—bots, extensions, and things that make everyday workflows a little easier."
 const host = process.env.HOST || "minagishl.com"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: title,
+  url: `https://${host}`,
+  description,
+  jobTitle: "Student Developer",
+  sameAs: ["https://x.com/minagishl", "https://github.com/minagishl"],
+}
 const metadataBase = new URL(`https://${host}`)
 
 export const metadata: Metadata = {
@@ -86,6 +96,10 @@ export default function RootLayout({
       )}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider>
           <SiteFrame>
             {children}

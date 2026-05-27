@@ -9,7 +9,7 @@ export function ThemeToggle() {
   const { trigger } = useWebHaptics({ debug: true })
 
   function handleClick() {
-    trigger("selection")
+    trigger("nudge")
     setTheme(resolvedTheme === "dark" ? "light" : "dark")
   }
 

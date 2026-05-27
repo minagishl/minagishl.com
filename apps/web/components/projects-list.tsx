@@ -5,7 +5,7 @@ import { ProjectsGithubLink } from "@/components/projects-github-link"
 const MAX_VISIBLE = 5
 
 const cellClassName = cn(
-  "flex h-full min-w-0 flex-col items-start justify-start gap-1 bg-background p-8 text-left",
+  "flex h-full min-w-0 flex-col items-start justify-start gap-1 bg-background p-4 text-left sm:p-8",
   "transition-colors hover:bg-muted/50"
 )
 

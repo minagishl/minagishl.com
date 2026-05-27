@@ -20,7 +20,10 @@ function verticalMask(cornerKey: (typeof corners)[number]["key"]) {
 
 function FrameCorners() {
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 z-10">
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 z-10 hidden sm:block"
+    >
       {corners.map((corner) => (
         <div key={corner.key}>
           <span
@@ -42,12 +45,12 @@ function FrameCorners() {
 
 export function SiteFrame({ children }: SiteFrameProps) {
   return (
-    <div className="flex min-h-svh justify-center px-4 py-10 sm:px-6 sm:py-14">
+    <div className="flex min-h-svh justify-center overflow-x-hidden px-0 py-6 sm:px-6 sm:py-14">
       <div className="relative w-full max-w-xl">
         <FrameCorners />
         <div
           className={cn(
-            "relative grid grid-cols-1 overflow-visible border border-border bg-background",
+            "relative grid grid-cols-1 overflow-visible border-0 bg-background sm:border sm:border-border",
             // Hairline between sections (not divide-y — borders shift absolute rails).
             "[&>*+*:not([data-frame-hatch])]:relative",
             "[&>*+*:not([data-frame-hatch])]:before:pointer-events-none [&>*+*:not([data-frame-hatch])]:before:absolute [&>*+*:not([data-frame-hatch])]:before:inset-x-0 [&>*+*:not([data-frame-hatch])]:before:top-0 [&>*+*:not([data-frame-hatch])]:before:z-10 [&>*+*:not([data-frame-hatch])]:before:h-px [&>*+*:not([data-frame-hatch])]:before:bg-border [&>*+*:not([data-frame-hatch])]:before:content-['']",

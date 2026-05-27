@@ -3,7 +3,7 @@ import { cn } from "@workspace/ui/lib/utils"
 const GITHUB_PROFILE_URL = "https://github.com/minagishl"
 
 const cellClassName = cn(
-  "flex h-full min-w-0 flex-col items-start justify-start gap-1 bg-background p-8 text-left",
+  "flex h-full min-w-0 flex-col items-start justify-start gap-1 bg-background p-4 text-left sm:p-8",
   "transition-colors hover:bg-muted/50"
 )
 

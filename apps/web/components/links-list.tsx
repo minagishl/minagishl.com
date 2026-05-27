@@ -46,10 +46,9 @@ export function LinksList({ items }: LinksListProps) {
         href={ISSUE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+        className="text-xs text-muted-foreground transition-colors hover:text-foreground"
       >
         Request a link
-        <ArrowUpRightIcon size={12} />
       </a>
     </div>
   )

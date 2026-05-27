@@ -53,7 +53,10 @@ Most static content is managed in TypeScript files.
 | ------------------------------------- | ------------------------------------ |
 | `apps/web/data/projects.ts`           | Project entries                      |
 | `apps/web/data/timeline.ts`           | Timeline entries, shown newest first |
+| `apps/web/data/links.ts`              | Mutual links section                 |
 | `apps/web/components/site-footer.tsx` | Footer and social links              |
+
+See [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) for step-by-step instructions on adding content.
 
 ## Scripts
 

@@ -105,8 +105,8 @@ export function TimelineList({ items }: TimelineListProps) {
       <h2 className="text-lg font-medium tracking-tight">Timeline</h2>
       <div>
         <ul>
-          {visible.map((item) => (
-            <TimelineEntry key={item.id} item={item} />
+          {visible.map((item, index) => (
+            <TimelineEntry key={index.toString()} item={item} />
           ))}
           {remaining > 0 ? (
             <li>

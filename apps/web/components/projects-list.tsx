@@ -14,11 +14,11 @@ function ProjectCard({ project }: { project: Project }) {
       <span className="text-sm leading-snug font-medium text-foreground">
         {project.name}
       </span>
-      <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-foreground/70">
+      <span className="font-mono text-xs text-muted-foreground">
         {project.repositoryName}
       </span>
       {project.description ? (
-        <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground transition-colors group-hover:text-foreground/70">
+        <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
           {project.description}
         </p>
       ) : null}

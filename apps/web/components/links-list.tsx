@@ -2,6 +2,9 @@ import { ArrowUpRightIcon } from "lucide-react"
 
 import type { MutualLink } from "@/data/links"
 
+const ISSUE_URL =
+  "https://github.com/minagishl/website/issues/new?template=mutual_link.yml"
+
 function LinkEntry({ link }: { link: MutualLink }) {
   return (
     <li>
@@ -36,10 +39,25 @@ type LinksListProps = {
 }
 
 export function LinksList({ items }: LinksListProps) {
+  const header = (
+    <div className="flex items-center justify-between">
+      <h2 className="text-lg font-medium tracking-tight">Links</h2>
+      <a
+        href={ISSUE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+      >
+        Request a link
+        <ArrowUpRightIcon size={12} />
+      </a>
+    </div>
+  )
+
   if (items.length === 0) {
     return (
       <div className="flex flex-col gap-4">
-        <h2 className="text-lg font-medium tracking-tight">Links</h2>
+        {header}
         <p className="text-sm text-muted-foreground">No links yet.</p>
       </div>
     )
@@ -47,7 +65,7 @@ export function LinksList({ items }: LinksListProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-lg font-medium tracking-tight">Links</h2>
+      {header}
       <ul className="divide-y divide-border">
         {items.map((link) => (
           <LinkEntry key={link.href} link={link} />

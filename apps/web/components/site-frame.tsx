@@ -45,7 +45,7 @@ function FrameCorners() {
 
 export function SiteFrame({ children }: SiteFrameProps) {
   return (
-    <div className="flex min-h-svh justify-center overflow-x-hidden px-0 py-6 sm:px-6 sm:py-14">
+    <div className="flex min-h-svh items-start justify-center overflow-x-hidden px-0 py-6 sm:px-6 sm:py-14">
       <div className="relative w-full max-w-xl">
         <FrameCorners />
         <div

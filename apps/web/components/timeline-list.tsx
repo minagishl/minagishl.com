@@ -128,7 +128,7 @@ export function TimelineList({ items }: TimelineListProps) {
                   aria-hidden
                   className={cn(
                     chevronClassName,
-                    "self-center justify-self-end transition-[transform,color] group-hover:translate-x-0.5 group-hover:text-foreground"
+                    "self-center justify-self-end transition-colors group-hover:text-foreground"
                   )}
                 />
               </button>

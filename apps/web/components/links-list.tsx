@@ -27,7 +27,7 @@ function LinkEntry({ link }: { link: MutualLink }) {
         <ArrowUpRightIcon
           aria-hidden
           size={14}
-          className="ml-4 shrink-0 text-muted-foreground transition-[transform,color] duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground"
+          className="ml-4 shrink-0 text-muted-foreground transition-colors duration-200 group-hover:text-foreground"
         />
       </a>
     </li>

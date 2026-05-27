@@ -7,6 +7,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Twilic",
+    repositoryName: "twilic/twilic",
+    href: "https://github.com/twilic/twilic",
+    description:
+      "A compact binary format for structured data—smaller than MessagePack when patterns repeat.",
+  },
+  {
     name: "Google Calendar Tonton",
     repositoryName: "google-calendar-tonton",
     href: "https://github.com/minagishl/google-calendar-tonton/",

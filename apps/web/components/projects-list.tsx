@@ -1,25 +1,24 @@
 import type { Project } from "@/data/projects"
-import { cn } from "@workspace/ui/lib/utils"
+import {
+  ProjectCardShell,
+  ProjectCardShellLink,
+} from "@/components/project-card-shell"
 import { ProjectsGithubLink } from "@/components/projects-github-link"
 
 const MAX_VISIBLE = 5
 
-const cellClassName = cn(
-  "flex h-full min-w-0 flex-col items-start justify-start gap-1 bg-background p-4 text-left sm:p-8",
-  "transition-colors hover:bg-muted/50"
-)
-
 function ProjectCard({ project }: { project: Project }) {
+  const gradientKey = project.repositoryName
   const content = (
     <>
       <span className="text-sm leading-snug font-medium text-foreground">
         {project.name}
       </span>
-      <span className="font-mono text-xs text-muted-foreground">
+      <span className="font-mono text-xs text-muted-foreground transition-colors group-hover:text-foreground/70">
         {project.repositoryName}
       </span>
       {project.description ? (
-        <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+        <p className="line-clamp-2 text-xs leading-relaxed text-muted-foreground transition-colors group-hover:text-foreground/70">
           {project.description}
         </p>
       ) : null}
@@ -28,18 +27,20 @@ function ProjectCard({ project }: { project: Project }) {
 
   if (project.href) {
     return (
-      <a
+      <ProjectCardShellLink
+        gradientKey={gradientKey}
         href={project.href}
         target="_blank"
         rel="noopener noreferrer"
-        className={cellClassName}
       >
         {content}
-      </a>
+      </ProjectCardShellLink>
     )
   }
 
-  return <article className={cellClassName}>{content}</article>
+  return (
+    <ProjectCardShell gradientKey={gradientKey}>{content}</ProjectCardShell>
+  )
 }
 
 type ProjectsListProps = {

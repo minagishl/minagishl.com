@@ -9,7 +9,8 @@ import { cn } from "@workspace/ui/lib/utils"
 
 const title = process.env.TITLE || "Minagishl"
 const description =
-  process.env.DESCRIPTION || "Minagishl is a student and engineer"
+  process.env.DESCRIPTION ||
+  "Student developer in Japan building open-source web tools—bots, extensions, and things that make everyday workflows a little easier."
 const host = process.env.HOST || "minagishl.com"
 const metadataBase = new URL(`https://${host}`)
 
@@ -20,6 +21,20 @@ export const metadata: Metadata = {
     template: `%s | ${title}`,
   },
   description,
+  keywords: [
+    "Minagishl",
+    "student developer",
+    "web developer",
+    "open source",
+    "Japan",
+    "Next.js",
+    "TypeScript",
+  ],
+  authors: [{ name: title, url: metadataBase }],
+  creator: title,
+  alternates: {
+    canonical: metadataBase,
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -33,6 +48,17 @@ export const metadata: Metadata = {
     title,
     description,
     site: "@minagishl",
+    creator: "@minagishl",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
   },
 }
 

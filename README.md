@@ -37,11 +37,11 @@ The app runs at [http://localhost:3000](http://localhost:3000).
 
 Create an `.env.local` file under `apps/web` when needed.
 
-| Variable      | Description                | Default                               |
-| ------------- | -------------------------- | ------------------------------------- |
-| `TITLE`       | Site title / About heading | `Minagishl`                           |
-| `DESCRIPTION` | Metadata description       | `Minagishl is a student and engineer` |
-| `HOST`        | Hostname for metadata      | `minagishl.com`                       |
+| Variable      | Description                | Default         |
+| ------------- | -------------------------- | --------------- |
+| `TITLE`       | Site title / About heading | `Minagishl`     |
+| `DESCRIPTION` | Metadata description       | `...`           |
+| `HOST`        | Hostname for metadata      | `minagishl.com` |
 
 These variables are listed in Turbo `globalEnv`, so they are available at build time.
 

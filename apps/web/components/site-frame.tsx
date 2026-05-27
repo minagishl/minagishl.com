@@ -50,7 +50,7 @@ export function SiteFrame({ children }: SiteFrameProps) {
         <FrameCorners />
         <div
           className={cn(
-            "relative grid grid-cols-1 overflow-visible border-0 bg-background sm:border sm:border-border",
+            "relative grid grid-cols-1 overflow-visible bg-background min-[576px]:border min-[576px]:border-border",
             // Hairline between sections (not divide-y — borders shift absolute rails).
             "[&>*+*:not([data-frame-hatch])]:relative",
             "[&>*+*:not([data-frame-hatch])]:before:pointer-events-none [&>*+*:not([data-frame-hatch])]:before:absolute [&>*+*:not([data-frame-hatch])]:before:inset-x-0 [&>*+*:not([data-frame-hatch])]:before:top-0 [&>*+*:not([data-frame-hatch])]:before:z-10 [&>*+*:not([data-frame-hatch])]:before:h-px [&>*+*:not([data-frame-hatch])]:before:bg-border [&>*+*:not([data-frame-hatch])]:before:content-['']",

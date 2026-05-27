@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from "lucide-react"
 import type { MutualLink } from "@/data/links"
 
 const ISSUE_URL =
-  "https://github.com/minagishl/website/issues/new?template=mutual_link.yml"
+  "https://github.com/minagishl/minagishl.com/issues/new?template=mutual_link.yml"
 
 function LinkEntry({ link }: { link: MutualLink }) {
   return (

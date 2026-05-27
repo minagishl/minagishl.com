@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+import { CopyLinkButton } from "@/components/copy-link-button"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const items = [
@@ -27,7 +28,10 @@ export function SiteFooter() {
               </Link>
             ))}
           </div>
-          <ThemeToggle />
+          <div className="flex items-center gap-4">
+            <CopyLinkButton />
+            <ThemeToggle />
+          </div>
         </div>
         <p>
           &#169; {year} {title}

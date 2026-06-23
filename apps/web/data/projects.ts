@@ -14,10 +14,11 @@ export const projects: Project[] = [
       "A compact binary format for structured data—smaller than MessagePack when patterns repeat.",
   },
   {
-    name: "Google Calendar Tonton",
-    repositoryName: "google-calendar-tonton",
-    href: "https://github.com/minagishl/google-calendar-tonton/",
-    description: "Auto-send Tonton’s schedule from Google Calendar.",
+    name: "Google Calendar Schedule Fill",
+    repositoryName: "google-calendar-schedule-fill",
+    href: "https://github.com/minagishl/google-calendar-schedule-fill",
+    description:
+      "Chrome extension that automatically fills your availability on scheduling sites from Google Calendar.",
   },
   {
     name: "Gmail Label Extension",

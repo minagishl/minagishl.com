@@ -4,6 +4,7 @@ import { CopyLinkButton } from "@/components/copy-link-button"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const items = [
+  { href: "/posts", name: "Posts" },
   { href: "https://x.com/minagishl", name: "Twitter" },
   { href: "https://github.com/minagishl", name: "GitHub" },
   { href: "https://discord.com/users/592245307853635645", name: "Discord" },
